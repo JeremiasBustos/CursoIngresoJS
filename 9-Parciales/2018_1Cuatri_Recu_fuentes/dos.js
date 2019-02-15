@@ -10,7 +10,7 @@ function mostrar()
 
   compra=parseInt(compra)
 
-  descuento=compra * .10
+  descuento=compra * .10;
 
   compraConDescuento=compra - descuento;
 

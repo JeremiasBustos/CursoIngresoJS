@@ -11,7 +11,7 @@ precio=prompt("Ingresar precio");
 
 precio=parseInt(precio);
 
-propina=precio * .10
+propina=precio * .10;
 
 precioMasPropina=precio + propina;
 
