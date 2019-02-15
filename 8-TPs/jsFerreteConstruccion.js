@@ -23,12 +23,38 @@ alert("Es " + alambre);
 }
 function Circulo () 
 {
-	
 	var radio;
+	var diametro;
+	var perimetro;
+	var pi=3.14
+	var alambre;
+
+	radio=document.getElementById("Radio").value;
+
+	diametro=radio * 2;
+
+	perimetro=diametro * pi;
+
+	alambre=perimetro * 3;
+
+	alert("La cantidad de alambre necesria es " + alambre);
 
 	
 }
 function Materiales () 
 {
+	var base;
+	var altura;
+	var cemento;
+	var cal;
 	
+
+	base=document.getElementById("Largo").value;
+	altura=document.getElementById("Ancho").value;
+
+	cemento=(base *  altura) * 2;
+	cal=(base * altura) * 3;
+
+	alert("Se necesitan " + cemento + " bolsas de cemento y " + cal + " bolsas de cal");
+
 }
