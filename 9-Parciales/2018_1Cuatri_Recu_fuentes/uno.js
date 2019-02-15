@@ -3,16 +3,21 @@ function mostrar()
 {
 	var mascotaUno;
 	var mascotaDos;
+	var pesoMascotaUno;
+	var pesoMascotaDos
 	var suma;
+    
 
-	mascotaUno=prompt("Ingrese peso de mascota");
-	mascotaDos=prompt("Ingrese peso de mascota");
+    mascotaUno=prompt("Ingrese mascota")
+    mascotaDos=prompt("Ingrese mascota")
+	pesoMascotaUno=prompt("Ingrese peso de mascota");
+	pesoMascotaDos=prompt("Ingrese peso de mascota");
 
-	mascotaUno=parseInt(mascotaUno);
-	mascotaDos=parseInt(mascotaDos)
+	pesoMascotaUno=parseInt(pesoMascotaUno);
+	pesoMascotaDos=parseInt(pesoMascotaDos)
 
-	suma=mascotaUno + mascotaDos
+	suma=pesoMascotaUno + pesoMascotaDos
 
-	alert("La suma es " + suma)
+	alert("Tenes dos mascotas " + mascotaUno  +" y " + mascotaDos  + " que pesan " + pesoMascotaUno + " y " + pesoMascotaDos  + " y la suma de sus kilos es " + suma)
 
 }
