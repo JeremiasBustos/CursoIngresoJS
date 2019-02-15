@@ -5,36 +5,32 @@ var precio;
 var descuento;
 var precioConDescuento10;
 var precioConDescuento15;
-var usarTarjeta;
-var compraConTarjeta;
+var formaDePago;
 var precioDeCompraConTarjeta
 
 libros=prompt("Ingrese cantidad de libros");
 precio=prompt("Ingrese precio");
-usarTarjeta=prompt("Usar tarjeta Si/No");
+formaDePago=prompt("Efectivo/Tarjeta");
 
 precio=parseInt(precio);
 
-if(libros >= 2)
+if(libros >= 2 && formaDePago == "efectivo")
 {
-descuento = precio * .10;
-precioConDescuento10=precio - descuento
-alert("El precio es " + precioConDescuento10);
+	descuento = precio * .10;
+	precioConDescuento10=precio - descuento
+	alert("el precio es " + precioConDescuento10);
 
 }	
-else if(precio > 2000 && libros >= 1)
+if(precio > 2000 && libros >= 1 && formaDePago == "efectivo")
 {
 
 	descuento=precio * 15 / 100;
 	precioConDescuento15=precio - descuento;
-	alert("El precio es " + precioConDescuento15);	
+	alert("el precio es " + precioConDescuento15);	
 }	
-else if(usarTarjeta == "Si" && usarTarjeta == "si")
+else
 {
 
-compraConTarjeta = precio * .10
-precioDeCompraConTarjeta = precio + compraConTarjeta;
-alert("El precio es " + precioDeCompraConTarjeta);
 
 }
 
