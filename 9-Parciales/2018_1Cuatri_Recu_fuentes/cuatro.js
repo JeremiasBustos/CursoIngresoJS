@@ -1,39 +1,70 @@
 function mostrar()
 {
-var libros;
-var precio;
+var numeroUno;
+var numeroDos;
+var numeroTres;
+var numeroCuatro;
+var numeroMasAlto;
+var suma;
+var mensaje;
 var descuento;
-var precioConDescuento10;
-var precioConDescuento15;
-var formaDePago;
-var precioDeCompraConTarjeta
+var recargo;
+var precioFinal;
 
-libros=prompt("Ingrese cantidad de libros");
-precio=prompt("Ingrese precio");
-formaDePago=prompt("Efectivo/Tarjeta");
+numeroUno=prompt("Ingrese numero uno");
+numeroDos=prompt("Ingrese numero dos");
+numeroTres=prompt("Ingrese numero tres");
+numeroCuatro=prompt("Ingrese numero cuatro");
 
-precio=parseInt(precio);
+numeroUno=parseInt(numeroUno);
+numeroDos=parseInt(numeroDos);
+numeroTres=parseInt(numeroTres);
+numeroCuatro=parseInt(numeroCuatro);
 
-if(libros >= 2 && formaDePago == "efectivo")
+suma=numeroUno + numeroDos + numeroTres + numeroCuatro;
+
+if(numeroUno > numeroDos &&  numeroUno > numeroTres && numeroUno > numeroCuatro)
 {
-	descuento = precio * .10;
-	precioConDescuento10=precio - descuento
-	alert("el precio es " + precioConDescuento10);
+	numeroMasAlto=numeroUno;
 
-}	
-if(precio > 2000 && libros >= 1 && formaDePago == "efectivo")
-{
-
-	descuento=precio * 15 / 100;
-	precioConDescuento15=precio - descuento;
-	alert("el precio es " + precioConDescuento15);	
-}	
-else
-{
-
-
-}
+}else
+	if(numeroDos > numeroTres && numeroDos > numeroCuatro)
+		{
+			numeroMasAlto=numeroDos;
+		}else
+			if(numeroTres > numeroCuatro )
+			{
+				numeroMasAlto=numeroTres;
+			}else
+				{
+					numeroMasAlto=numeroCuatro
+				}	
 
 
+
+
+
+					if(suma > 100)
+						{
+							descuento=90;
+		 
+						}else
+							if(suma > 50 && suma < 100)
+								{
+									descuento=95;
+			
+			 
+
+									}else
+										if(suma < 50)
+											{
+												descuento=110
+				
+			  
+
+											}	 
+
+	precioFinal=(suma * descuento) /100;
+	alert("El numero mas alto es " + numeroMasAlto + " y el precio final es " + precioFinal);
 
 }
